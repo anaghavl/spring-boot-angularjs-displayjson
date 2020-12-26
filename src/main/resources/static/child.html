@@ -1,0 +1,24 @@
+<div ng-controller="childController">
+  <div class="container">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Total Amount</th>
+        <th>Paid Amount</th>
+      </tr>
+      <tr ng-repeat="d in data">
+        <th>{{d.id}}</th>
+        <th>{{d.sender}}</th>
+        <th>{{d.receiver}}</th>
+        <th>{{d.totalAmount}}</th>
+        <th>{{d.paidAmount}}</th>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <input type="button" ng-click="goBack()" value="Back">
+  </div>
+</div>
+    

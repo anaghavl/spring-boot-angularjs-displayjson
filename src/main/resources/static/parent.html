@@ -1,0 +1,29 @@
+<div ng-controller="parentController">
+  <div class="container">
+    <table>
+      <tr>
+        <th>
+        <a href ng-click="changeDir()">ID</a></th>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Total Amount</th>
+        <th>Total Paid Amount</th>
+      </tr>
+      <tr ng-repeat="d in data">
+        <th>{{d.id}}</th>
+        <th>{{d.sender}}</th>
+        <th>{{d.receiver}}</th>
+        <th>{{d.totalAmount}}</th>
+        <th>
+          <a href ng-click="gotoChildren(d)">{{d.totalPaidAmount}}</a>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <input type="button" ng-disabled="pageNo === 1" ng-click="prevPage()" value="Prev">
+    <input type="button" ng-disabled="pageNo >= totalPages" ng-click="nextPage()" value="Next">
+  </div>
+</div>
+        
+  
